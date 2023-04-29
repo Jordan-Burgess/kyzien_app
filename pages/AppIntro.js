@@ -33,6 +33,8 @@ const AppIntro = () => {
         <Text style={styles.introTitleStyle}>{item.title}</Text>
         <Image style={styles.introImageStyle} source={item.image} />
         <Text style={styles.introTextStyle}>{item.text}</Text>
+        <Button title="Login" color='#ffffff'/>
+        <Button title="Register" color='#ffffff'/>
       </View>
     );
   };
