@@ -9,6 +9,7 @@ function Register() {
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [hidePass, setHidePass] = useState(true)
+  const [hidePassConfirm, setHidePassConfrim] = useState(true)
 
   return (
     <View>
@@ -38,8 +39,9 @@ function Register() {
         onChangeText={setPasswordConfirm}
         value={passwordConfirm}
         placeholder='Enter Password'
-        secureTextEntry={true}
+        secureTextEntry={hidePassConfirm? true : false}
       />
+      <Icon name={hidePassConfirm ? 'eye' : 'eye-off'} onPress={() => setHidePassConfrim(!hidePassConfirm)}/>
       <Button title='Register' color='#000'/>
     </View>
   )
