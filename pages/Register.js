@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {View, TextInput, Button, StyleSheet} from 'react-native';
+import {View, TextInput, Button, StyleSheet, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -34,11 +34,12 @@ function Register() {
         secureTextEntry={hidePass? true : false}
       />
       <Icon name={hidePass ? 'eye' : 'eye-off'} onPress={() => setHidePass(!hidePass)}/>
+      <Text>Passwords must be unique and alphanumeric, with a minimum of 8 characters and numbers</Text>
       <TextInput
         style={styles.input}
         onChangeText={setPasswordConfirm}
         value={passwordConfirm}
-        placeholder='Enter Password'
+        placeholder='Confirm Password'
         secureTextEntry={hidePassConfirm? true : false}
       />
       <Icon name={hidePassConfirm ? 'eye' : 'eye-off'} onPress={() => setHidePassConfrim(!hidePassConfirm)}/>
