@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
 const slides = [
   {
     key: 's1',
-    text: 'Best Recharge offers',
+    text: 'Connect with clients around the world.',
     title: 'As a Provider...',
     image: {
       uri:
