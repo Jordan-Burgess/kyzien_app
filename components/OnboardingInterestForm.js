@@ -27,6 +27,7 @@ function OnboardingInterestForm({service}) {
   const [interest, setInterest] = useState('')
   return (
     <View>
+      <Text>Excellent! Let's tailor your {service} experience to you!</Text>
       <Text>Choose up to 5 interests!</Text>
       <Text>Don't see what you're looking for? Search here!</Text>
       <TextInput
