@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Button } from 'rea ct-native'
+import { Text, View, Button } from 'react-native'
 
 function OnboardingServiceForm() {
   return (

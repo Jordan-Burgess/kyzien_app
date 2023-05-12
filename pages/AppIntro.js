@@ -8,8 +8,10 @@ import {
   Button,
 } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
+import { useNavigation } from '@react-navigation/native'
 
 const AppIntro = () => {
+  const navigation = useNavigation()
   const [showRealApp, setShowRealApp] = useState(false);
 
   const onDone = () => {
@@ -33,8 +35,8 @@ const AppIntro = () => {
         <Text style={styles.introTitleStyle}>{item.title}</Text>
         <Image style={styles.introImageStyle} source={item.image} />
         <Text style={styles.introTextStyle}>{item.text}</Text>
-        <Button title="Login" color='#ffffff'/>
-        <Button title="Register" color='#ffffff'/>
+        <Button title="Login" color='#ffffff' onPress={() => navigation.navigate('Login')}/>
+        <Button title="Register" color='#ffffff' onPress={() => navigation.navigate('Register')}/>
       </View>
     );
   };
